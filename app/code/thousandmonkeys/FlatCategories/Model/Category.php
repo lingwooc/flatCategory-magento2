@@ -8,6 +8,7 @@
 namespace thousandmonkeys\FlatCategories\Model;
 
 use thousandmonkeys\FlatCategories\Api\CategoryInterface;
+use Magento\Catalog\Model\ResourceModel\Category\Collection;
 
 /**
  * Defines the implementaiton class of the calculator service contract.

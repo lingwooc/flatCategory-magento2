@@ -12,6 +12,7 @@ A flat category rest endpoint for magento to work round the stupidity that is th
 # Usage
 GET rest/V1/flatCategories?searchCriteria
 Response:
+```json
 {
   "items": [
     {
@@ -61,3 +62,4 @@ Response:
   },
   "total_count": 0
 }
+```

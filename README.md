@@ -1,5 +1,5 @@
-# flatCategory-magento
-A flat category rest endpoint for magento to work round the stupidity that is the default tree interface. This just gives a list of all categories with searchCriteria supported to make cahing and lookups easy, instead of hard and annoying.
+# flatCategory-magento2
+A flat category rest endpoint for magento2 to work round the stupidity that is the default tree interface. This just gives a list of all categories with searchCriteria supported to make caching and lookups easy, instead of hard and annoying.
 
 # Installation
 - Extract over your magento installation.

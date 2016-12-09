@@ -7,9 +7,15 @@
 
 namespace thousandmonkeys\FlatCategories\Api;
 
-use thousandmonkeys\FlatCategories\Api\Data\PointInterface;
+use thousandmonkeys\FlatCategories\Api\CategorySearchResultsInterface;
 
-interface CalculatorInterface
+interface CategoryInterface
 {
-    public function getList();
+    /**
+     * Get product list
+     *
+     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
+     * @return \thousandmonkeys\FlatCategories\Api\CategorySearchResultsInterface
+     */
+    public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
 }

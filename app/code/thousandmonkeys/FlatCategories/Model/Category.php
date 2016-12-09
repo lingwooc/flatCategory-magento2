@@ -14,21 +14,39 @@ use thousandmonkeys\FlatCategories\Api\CategoryInterface;
  */
 class Category implements CategoryInterface
 {
+
     protected $searchResultsFactory;
+
+    /**
+     * @var \Magento\Framework\Api\SearchCriteriaBuilder
+     */
     protected $searchCriteriaBuilder;
+
     protected $collectionFactory;
+
+    /**
+     * @var \Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface
+     */
     protected $extensionAttributesJoinProcessor;
+
+    /**
+     * @var \Magento\Catalog\Api\ProductAttributeRepositoryInterface
+     */
+    protected $metadataService;
 
 	public function __construct(
 	\thousandmonkeys\FlatCategories\Api\CategorySearchResultsInterfaceFactory $searchResultsFactory,
 	\Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder,
 	\Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $collectionFactory,
-	\Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface $extensionAttributesJoinProcessor)
+	\Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface $extensionAttributesJoinProcessor,
+    \Magento\Catalog\Api\ProductAttributeRepositoryInterface $metadataServiceInterface)
 	{
 		$this->searchResultsFactory = $searchResultsFactory;
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
 		$this->collectionFactory = $collectionFactory;
         $this->extensionAttributesJoinProcessor = $extensionAttributesJoinProcessor;
+                $this->metadataService = $metadataServiceInterface;
+
 	}
 
     /**

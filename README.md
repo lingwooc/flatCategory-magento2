@@ -2,7 +2,7 @@
 A flat category rest endpoint for magento2 to work round the stupidity that is the default tree interface. This just gives a list of all categories with searchCriteria supported to make caching and lookups easy, instead of hard and annoying.
 
 # Installation
-- Extract over your magento installation.
+- composer require thousandmonkeys/m2-flatcategories-module
 - php bin/magento deploy:mode:set developer
 - php bin/magento setup:upgrade
 - php bin/magento setup:di:compile
